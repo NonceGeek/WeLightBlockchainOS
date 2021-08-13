@@ -1,9 +1,9 @@
-import React from 'react'
+import local from '../../config/local'
 
 export default function Todoist() {
+    const todoist = local.appUrl.todoist
     return (
-        <iframe src="https://todoist.com/showProject?id=220474322" frameBorder="0" title="Todoist" className="h-full w-full"></iframe>
-        // just to bypass the headers 🙃
+        <iframe src={todoist} frameBorder="0" title="Todoist" className="h-full w-full"></iframe>
     )
 }
 
