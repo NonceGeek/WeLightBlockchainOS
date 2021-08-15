@@ -1,7 +1,7 @@
-import local from '../../config/local'
+import {urls} from '../../apps.config'
 
 function BootingScreen(props) {
-    const repo = local.staticUrl.repo
+    const repo = urls.staticUrl.repo
 
     return (
         <div style={(props.visible || props.isShutDown ? { zIndex: "100" } : { zIndex: "-20" })} className={(props.visible || props.isShutDown ? " visible opacity-100" : " invisible opacity-0 ") + " absolute duration-500 select-none flex flex-col justify-around items-center top-0 right-0 overflow-hidden m-0 p-0 h-screen w-screen bg-black"}>

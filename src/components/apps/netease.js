@@ -1,8 +1,8 @@
-import local from '../../config/local'
+import {urls} from '../../apps.config'
 
 export default function Netease() {
-    const musicHome = local.appUrl.musicHome
-    const musicPlayer = local.appUrl.musicPlayer
+    const musicHome = urls.appUrl.musicHome
+    const musicPlayer = urls.appUrl.musicPlayer
 
     return (
         <>

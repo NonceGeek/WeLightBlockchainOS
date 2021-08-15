@@ -1,7 +1,7 @@
-import local from '../../config/local'
+import {urls} from '../../apps.config'
 
 export default function Todoist() {
-    const todoist = local.appUrl.todoist
+    const todoist = urls.appUrl.todoist
     return (
         <iframe src={todoist} frameBorder="0" title="Todoist" className="h-full w-full"></iframe>
     )

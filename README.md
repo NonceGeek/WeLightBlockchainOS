@@ -21,10 +21,10 @@ npm start
 
 ### 修改App
 
-App的主体是`iframe`. 通过修改`iframe`的url可以让App显示不同的内容. 存储url的文件位于`src/config/local.js`. 如要修改网易云音乐App显示的内容, 则可以进行如下修改:
+App的主体是`iframe`. 通过修改`iframe`的url可以让App显示不同的内容. 存储url的文件位于`src/apps.config.js`. 如要修改网易云音乐App显示的内容, 则可以进行如下修改:
 
 ```
-// src/config/local.js
+// src/apps.config.js
 
 const urls = {
     appUrl: {
