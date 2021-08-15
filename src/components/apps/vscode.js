@@ -1,10 +1,10 @@
-import React from 'react'
+import {urls} from '../../apps.config'
 
 export default function VsCode() {
+    const vscode = urls.appUrl.vscode
+
     return (
-        <iframe src="https://github1s.com/WeLightProject/WeLightBlockchainOS" frameBorder="0" title="VsCode" className="h-full w-full bg-ub-cool-grey"></iframe>
-        // this is not my work, but it's amazing!
-        // Here is the link to the original repo: https://github.com/conwnet/github1s
+        <iframe src={vscode} frameBorder="0" title="VsCode" className="h-full w-full bg-ub-cool-grey"></iframe>
     )
 }
 

@@ -1,6 +1,7 @@
-import React from 'react'
+import {urls} from '../../apps.config'
 
 function BootingScreen(props) {
+    const repo = urls.staticUrl.repo
 
     return (
         <div style={(props.visible || props.isShutDown ? { zIndex: "100" } : { zIndex: "-20" })} className={(props.visible || props.isShutDown ? " visible opacity-100" : " invisible opacity-0 ") + " absolute duration-500 select-none flex flex-col justify-around items-center top-0 right-0 overflow-hidden m-0 p-0 h-screen w-screen bg-black"}>
@@ -12,7 +13,7 @@ function BootingScreen(props) {
             </div>
             <img className="md:w-1/5 w-1/2" src="./themes/Yaru/status/ubuntu_white_hex.svg" alt="Ubuntu Name" />
             <div className="text-white mb-4">
-                <a href="https://github.com/WeLightProject/WeLightBlockchainOS" rel="noreferrer noopener" target="_blank" className="underline">github</a>
+                <a href={repo} rel="noreferrer noopener" target="_blank" className="underline">github</a>
             </div>
         </div>
     )
