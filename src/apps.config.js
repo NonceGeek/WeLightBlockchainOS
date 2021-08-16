@@ -1,6 +1,7 @@
 import displayTodoist from './components/apps/todoist';
 import displayNetease from './components/apps/netease';
 import displayVsCode from './components/apps/vscode';
+import displayWeFront from './components/apps/webaseFront';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
@@ -52,6 +53,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayNetease, // 嘉然小姐😅
+    },    
+    {
+        id: "wefront",
+        title: "WeFront",
+        icon: './themes/Yaru/apps/webasefront.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayWeFront,
     },
     {
         id: "settings",
