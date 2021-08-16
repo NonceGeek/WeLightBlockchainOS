@@ -2,7 +2,6 @@
 微芒虚拟区块链操作系统
 
 ## 启动项目
----
 
 下载依赖
 
@@ -17,7 +16,6 @@ npm start
 ```
 
 ## 开发简介
----
 
 ### 修改App
 
@@ -36,10 +34,45 @@ const urls = {
 
 ### 添加App
 
-在`apps.config.js`中添加新的对象. 注意对象中要包含一个`display{App}`函数.
+在`apps`中添加一个App组件, 并在`apps.config.js`中添加App配置与App所用的url. 注意对象中要包含一个`displaySomeApp`函数.
 
 ```
-export const displayChrome = () => {
-    return <Chrome> </Chrome>;
+// src/components/apps/someapp.js
+
+import {urls} from '../../apps.config'
+
+export default function SomeApp() {
+    const someapp = urls.appUrl.someapp
+
+    return (
+        <iframe src={someapp}></iframe>
+    )
 }
+
+export const displaySomeApp = () => {
+    return <SomeApp></SomeApp>;
+}
+```
+
+```
+// src/apps.config.js
+
+import { displaySomeApp } from './components/apps/someapp';
+
+const apps = [
+    {
+        id: "someapp",
+        title: "SomeApp",
+        icon: './themes/Yaru/apps/someapp.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: true,
+        screen: displaySomeApp,
+    },
+    ...
+
+const urls = {
+    appUrl: {
+        someapp: 'http://...',
+        ...
 ```
