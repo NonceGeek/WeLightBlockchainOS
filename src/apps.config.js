@@ -53,7 +53,7 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayNetease, // 嘉然小姐😅
-    },    
+    },
     {
         id: "wefront",
         title: "WeFront",
@@ -104,9 +104,12 @@ const urls = {
         musicHome: 'https://music.163.com/#/playlist?id=2469085999', // 由于同源限制, 无法正常播放网易云音乐网页版.
         // todolist url
         todoist: 'https://todoist.com/showProject?id=220474322',
-        // vscode url (add '1s' after github in repo link)
+        // vscode url
         // vscode: 'https://github1s.com/WeLightProject/WeLightBlockchainOS', (only viewable)
+        // powered by stackblitz (edit, preview, console)
         vscode: 'https://stackblitz.com/edit/react-wlitvd',
+        // terminal url
+        terminal: 'http://182.92.219.88:100/',
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
