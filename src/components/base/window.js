@@ -10,6 +10,15 @@ export class Window extends Component {
         this.id = null;
         this.startX = 60;
         this.startY = 10;
+        // for resizing app function
+        this.isResizing = false
+        // get browser window size
+        this.windowWidth = window.innerWidth
+        this.windowHeight = window.innerHeight
+        this.beforeResizeMouseX = 0
+        this.beforeResizeMouseY = 0
+        this.resizeDifferenceX = 0
+        this.resizeDifferenceY = 0
         this.state = {
             cursorType: "cursor-default",
             width: 60,
@@ -173,7 +182,14 @@ export class Window extends Component {
                 bounds={{ left: 0, top: 0, right: this.state.parentSize.width, bottom: this.state.parentSize.height }}
             >
                 <div style={{ width: `${this.state.width}%`, height: `${this.state.height}%` }}
-                    className={this.state.cursorType + " " + (this.state.closed ? " closed-window " : "") + (this.state.maximized ? " duration-300 rounded-none" : " rounded-lg rounded-b-none") + (this.props.minimized ? " opacity-0 invisible duration-200 " : "") + (this.props.isFocused ? " z-30 " : " z-20 notFocused") + " opened-window overflow-hidden min-w-1/4 min-h-1/4 main-window absolute window-shadow border-black border-opacity-40 border border-t-0 flex flex-col"}
+                    className={
+                        this.state.cursorType + " "
+                        + (this.state.closed ? " closed-window " : "")
+                        + (this.state.maximized ? " duration-300 rounded-none" : " rounded-lg rounded-b-none")
+                        + (this.props.minimized ? " opacity-0 invisible duration-200 " : "")
+                        + (this.props.isFocused ? " z-30 " : " z-20 notFocused")
+                        + " opened-window overflow-visible min-w-1/4 min-h-1/4 main-window absolute window-shadow border-black border-opacity-40 border border-t-0 flex flex-col transition-all duration-75 resize"
+                    }
                     id={this.id}
                 >
                     <WindowYBorder resize={this.handleHorizontalResize} />
@@ -185,6 +201,31 @@ export class Window extends Component {
                         : <WindowMainScreen screen={this.props.screen} title={this.props.title}
                             addFolder={this.props.id === "terminal" ? this.props.addFolder : null}
                             openApp={this.props.openApp} />)}
+                    <span
+                        onMouseMove={(e) => {
+                            if (this.isResizing) {
+                                // app size is in percent, so calculate that with window size and multiply a number to make resizing more smooth.
+                                this.resizeDifferenceX = ((e.clientX - this.beforeResizeMouseX)/this.windowWidth) * 3.5
+                                this.resizeDifferenceY = ((e.clientY - this.beforeResizeMouseY)/this.windowHeight)* 3.5
+                                this.setState({width: this.state.width + this.resizeDifferenceX})
+                                this.setState({height: this.state.height + this.resizeDifferenceY})
+                            }
+                    }}
+                        // when click on the section, start resizing and get initial mouse position.
+                        onMouseDown={(e) => {
+                            this.isResizing = true;
+                            this.beforeResizeMouseX = e.clientX
+                            this.beforeResizeMouseY = e.clientY
+                        }}
+                        onMouseUp={() => this.isResizing = false}
+                        // when mousedown, start resizing and make <span> cover the whole window.
+                        // when mouseup, stop resizing and make <span> back to smaller size.
+                        className={
+                            (this.isResizing?'fixed h-screen w-screen top-0 left-0 opacity-0':'bottom-0 right-0 w-3.5 h-3.5 absolute')
+                            +' z-30'}
+                        style={{cursor: 'se-resize'}}
+                    >
+                    </span>
                 </div>
             </Draggable >
         )
