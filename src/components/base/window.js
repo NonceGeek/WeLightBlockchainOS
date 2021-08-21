@@ -167,6 +167,26 @@ export class Window extends Component {
         });
     }
 
+    startResizing = (event) => {
+        this.isResizing = true;
+        this.beforeResizeMouseX = event.clientX
+        this.beforeResizeMouseY = event.clientY
+    }
+
+    endResizing = () => {
+        this.isResizing = false
+    }
+
+    calcResizeChange = (event) => {
+        if (this.isResizing) {
+            // app size is in percent, so calculate that with window size and multiply a number to make resizing more smooth.
+            this.resizeDifferenceX = ((event.clientX - this.beforeResizeMouseX)/this.windowWidth) * 3.5
+            this.resizeDifferenceY = ((event.clientY - this.beforeResizeMouseY)/this.windowHeight)* 3.5
+            this.setState({width: this.state.width + this.resizeDifferenceX})
+            this.setState({height: this.state.height + this.resizeDifferenceY})
+        }
+    }
+
     render() {
         return (
             <Draggable
@@ -179,7 +199,7 @@ export class Window extends Component {
                 onDrag={this.checkOverlap}
                 allowAnyClick={false}
                 defaultPosition={{ x: this.startX, y: this.startY }}
-                bounds={{ left: 0, top: 0, right: this.state.parentSize.width, bottom: this.state.parentSize.height }}
+                bounds={{ left: 0, top: -5, right: this.windowWidth, bottom: this.windowHeight }}
             >
                 <div style={{ width: `${this.state.width}%`, height: `${this.state.height}%` }}
                     className={
@@ -202,22 +222,10 @@ export class Window extends Component {
                             addFolder={this.props.id === "terminal" ? this.props.addFolder : null}
                             openApp={this.props.openApp} />)}
                     <span
-                        onMouseMove={(e) => {
-                            if (this.isResizing) {
-                                // app size is in percent, so calculate that with window size and multiply a number to make resizing more smooth.
-                                this.resizeDifferenceX = ((e.clientX - this.beforeResizeMouseX)/this.windowWidth) * 3.5
-                                this.resizeDifferenceY = ((e.clientY - this.beforeResizeMouseY)/this.windowHeight)* 3.5
-                                this.setState({width: this.state.width + this.resizeDifferenceX})
-                                this.setState({height: this.state.height + this.resizeDifferenceY})
-                            }
-                    }}
+                        onMouseMove={event => this.calcResizeChange(event)}
                         // when click on the section, start resizing and get initial mouse position.
-                        onMouseDown={(e) => {
-                            this.isResizing = true;
-                            this.beforeResizeMouseX = e.clientX
-                            this.beforeResizeMouseY = e.clientY
-                        }}
-                        onMouseUp={() => this.isResizing = false}
+                        onMouseDown={event => this.startResizing(event)}
+                        onMouseUp={this.endResizing}
                         // when mousedown, start resizing and make <span> cover the whole window.
                         // when mouseup, stop resizing and make <span> back to smaller size.
                         className={
