@@ -1,5 +1,6 @@
 import displayNetease from './components/apps/netease';
 import displayTiktok from './components/apps/tiktok';
+import displayRemix from './components/apps/remix';
 import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import { displayTerminal } from './components/apps/terminal';
@@ -35,6 +36,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayTerminal,
+    },
+    {
+        id: "remix",
+        title: "Remix",
+        icon: './themes/Yaru/apps/remix.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayRemix,
     },
     {
         id: "wefront",
@@ -111,7 +121,9 @@ const urls = {
         // terminal url
         terminal: 'http://182.92.219.88:100/',
         // tiktok url
-        tiktok: 'https://www.douyin.com/recommend'
+        tiktok: 'https://www.douyin.com/recommend',
+        // remix url
+        remix: 'https://remix.ethereum.org/'
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
