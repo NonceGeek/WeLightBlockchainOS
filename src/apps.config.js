@@ -1,5 +1,5 @@
-import displayTodoist from './components/apps/todoist';
 import displayNetease from './components/apps/netease';
+import displayTiktok from './components/apps/tiktok';
 import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import { displayTerminal } from './components/apps/terminal';
@@ -17,15 +17,6 @@ const apps = [
         favourite: true,
         desktop_shortcut: true,
         screen: displayChrome,
-    },
-    {
-        id: "todo-ist",
-        title: "Todoist",
-        icon: './themes/Yaru/apps/todoist.png',
-        disabled: false,
-        favourite: true,
-        desktop_shortcut: false,
-        screen: displayTodoist,
     },
     {
         id: "vscode",
@@ -46,6 +37,15 @@ const apps = [
         screen: displayTerminal,
     },
     {
+        id: "wefront",
+        title: "WeFront",
+        icon: './themes/Yaru/apps/webasefront.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayWeFront,
+    },
+    {
         id: "netease",
         title: "Netease",
         icon: './themes/Yaru/apps/netease.png',
@@ -55,13 +55,13 @@ const apps = [
         screen: displayNetease, // 嘉然小姐😅
     },
     {
-        id: "wefront",
-        title: "WeFront",
-        icon: './themes/Yaru/apps/webasefront.png',
+        id: "tiktok",
+        title: "Tiktok",
+        icon: './themes/Yaru/apps/tiktok.png',
         disabled: false,
         favourite: true,
         desktop_shortcut: false,
-        screen: displayWeFront,
+        screen: displayTiktok, // 嘉然小姐😅
     },
     {
         id: "settings",
@@ -110,6 +110,8 @@ const urls = {
         vscode: 'https://stackblitz.com/edit/react-wlitvd',
         // terminal url
         terminal: 'http://182.92.219.88:100/',
+        // tiktok url
+        tiktok: 'https://www.douyin.com/recommend'
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
