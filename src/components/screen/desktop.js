@@ -381,7 +381,7 @@ export class Desktop extends Component {
             if (currentApp) {
                 frequentApps.forEach((app) => {
                     if (app.id === currentApp.id) {
-                        app.frequency += 1; // increase the frequency if app is found 
+                        app.frequency += 1; // increase the frequency if app is found
                     }
                 });
             } else {
@@ -429,7 +429,7 @@ export class Desktop extends Component {
     }
 
     focus = (objId) => {
-        // removes focus from all window and 
+        // removes focus from all window and
         // gives focus to window with 'id = objId'
         var focused_windows = this.state.focused_windows;
         focused_windows[objId] = true;
@@ -495,10 +495,10 @@ export class Desktop extends Component {
 
     render() {
         return (
-            <div className={" h-full w-full flex flex-col items-end justify-start content-start flex-wrap-reverse pt-8 bg-transparent relative overflow-hidden overscroll-none window-parent"}>
+            <div className={"h-full w-full flex flex-col items-end justify-start content-start flex-wrap-reverse pt-8 bg-transparent relative overflow-hidden overscroll-none window-parent"}>
 
                 {/* Window Area */}
-                <div className="absolute h-full w-full bg-transparent" data-context="desktop-area">
+                <div className="h-full w-full bg-transparent" data-context="desktop-area">
                     {this.renderWindows()}
                 </div>
 
