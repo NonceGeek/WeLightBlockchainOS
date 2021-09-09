@@ -180,10 +180,13 @@ export class Window extends Component {
     calcResizeChange = (event) => {
         if (this.isResizing) {
             // app size is in percent, so calculate that with window size and multiply a number to make resizing more smooth.
-            this.resizeDifferenceX = ((event.clientX - this.beforeResizeMouseX)/this.windowWidth) * 0.8
-            this.resizeDifferenceY = ((event.clientY - this.beforeResizeMouseY)/this.windowHeight) * 0.8
-            this.setState({width: this.state.width + this.resizeDifferenceX})
-            this.setState({height: this.state.height + this.resizeDifferenceY})
+            this.resizeDifferenceX = ((event.clientX - this.beforeResizeMouseX)/this.windowWidth) * 3
+            this.resizeDifferenceY = ((event.clientY - this.beforeResizeMouseY)/this.windowHeight) * 3
+            // To increase performance, 20% chance that it will rerender...
+            if (Math.floor(Math.random() * 4) === 0) {
+                this.setState({width: this.state.width + this.resizeDifferenceX})
+                this.setState({height: this.state.height + this.resizeDifferenceY})
+            }
         }
     }
 
