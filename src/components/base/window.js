@@ -204,14 +204,14 @@ export class Window extends Component {
                 defaultPosition={{ x: this.startX, y: this.startY }}
                 bounds={{ left: 0, top: -5, right: this.windowWidth, bottom: this.windowHeight }}
             >
-                <div style={{ width: `${this.state.width}%`, height: `${this.state.height}%` }}
+                <div style={{ width: `${this.state.width}%`, height: `${this.state.height}%`}}
                     className={
                         this.state.cursorType + " "
                         + (this.state.closed ? " closed-window " : "")
                         + (this.state.maximized ? " duration-300 rounded-none" : " rounded-lg rounded-b-none")
                         + (this.props.minimized ? " opacity-0 invisible duration-200 " : "")
                         + (this.props.isFocused ? " z-30 " : " z-20 notFocused")
-                        + " opened-window overflow-visible min-w-1/4 min-h-1/4 main-window absolute window-shadow border-black border-opacity-40 border border-t-0 flex flex-col transition-all duration-75 resize"
+                        + " opened-window overflow-hidden min-w-1/4 min-h-1/4 main-window absolute window-shadow border-black border-opacity-40 border border-t-0 flex flex-col transition-all duration-75 resize"
                     }
                     id={this.id}
                 >
@@ -224,19 +224,6 @@ export class Window extends Component {
                         : <WindowMainScreen screen={this.props.screen} title={this.props.title}
                             addFolder={this.props.id === "terminal" ? this.props.addFolder : null}
                             openApp={this.props.openApp} />)}
-                    <span
-                        onMouseMove={event => this.calcResizeChange(event)}
-                        // when click on the section, start resizing and get initial mouse position.
-                        onMouseDown={event => this.startResizing(event)}
-                        onMouseUp={this.endResizing}
-                        // when mousedown, start resizing and make <span> cover the whole window.
-                        // when mouseup, stop resizing and make <span> back to smaller size.
-                        className={
-                            (this.isResizing?'fixed h-screen w-screen top-0 left-0 opacity-0':'bottom-0 right-0 w-3.5 h-3.5 absolute')
-                            +' z-30'}
-                        style={{cursor: 'se-resize'}}
-                    >
-                    </span>
                 </div>
             </Draggable >
         )
