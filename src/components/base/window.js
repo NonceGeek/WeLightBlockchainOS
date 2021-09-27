@@ -10,15 +10,6 @@ export class Window extends Component {
         this.id = null;
         this.startX = 60;
         this.startY = 10;
-        // for resizing app function
-        this.isResizing = false
-        // get browser window size
-        this.windowWidth = window.innerWidth
-        this.windowHeight = window.innerHeight
-        this.beforeResizeMouseX = 0
-        this.beforeResizeMouseY = 0
-        this.resizeDifferenceX = 0
-        this.resizeDifferenceY = 0
         this.state = {
             cursorType: "cursor-default",
             width: 60,
@@ -165,29 +156,6 @@ export class Window extends Component {
                 this.props.closed(this.id)
             }, 300) // after 300ms this window will be unmounted from parent (Desktop)
         });
-    }
-
-    startResizing = (event) => {
-        this.isResizing = true;
-        this.beforeResizeMouseX = event.clientX
-        this.beforeResizeMouseY = event.clientY
-    }
-
-    endResizing = () => {
-        this.isResizing = false
-    }
-
-    calcResizeChange = (event) => {
-        if (this.isResizing) {
-            // app size is in percent, so calculate that with window size and multiply a number to make resizing more smooth.
-            this.resizeDifferenceX = ((event.clientX - this.beforeResizeMouseX)/this.windowWidth) * 3
-            this.resizeDifferenceY = ((event.clientY - this.beforeResizeMouseY)/this.windowHeight) * 3
-            // To increase performance, 20% chance that it will rerender...
-            if (Math.floor(Math.random() * 4) === 0) {
-                this.setState({width: this.state.width + this.resizeDifferenceX})
-                this.setState({height: this.state.height + this.resizeDifferenceY})
-            }
-        }
     }
 
     render() {
