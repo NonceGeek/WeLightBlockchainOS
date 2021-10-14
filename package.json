@@ -1,7 +1,6 @@
 {
   "name": "WeLightBlockchainOS",
   "version": "0.0.1",
-  "homepage": "http://WeLightProject.github.io/WeLightBlockchainOS",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",

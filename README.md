@@ -1,7 +1,7 @@
 # WeLightBlockchainOS
 微芒虚拟区块链操作系统
 
-> Demo: https://welightproject.github.io/WeLightBlockchainOS/
+> Demo: http://os.doge.university
 
 ## 启动项目
 
