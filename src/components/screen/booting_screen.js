@@ -71,7 +71,7 @@ function BootingScreen(props) {
           >
             <img
               className='w-10'
-              src='/images/logos/github.png'
+              src='./images/logos/github.png'
               alt='github logo'
             />
             <div className='px-5'>Login with GitHub</div>
@@ -82,7 +82,7 @@ function BootingScreen(props) {
           >
             <img
               className='w-10'
-              src='/images/logos/metamask.svg'
+              src='./images/logos/metamask.svg'
               alt='metamask logo'
             />
             <div className='px-5'>Login with MetaMask</div>
