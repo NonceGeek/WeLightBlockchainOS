@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/WeLightBlockchainOS/static/css/main.77c58565.chunk.css",
+    "main.js": "/WeLightBlockchainOS/static/js/main.2433e667.chunk.js",
+    "main.js.map": "/WeLightBlockchainOS/static/js/main.2433e667.chunk.js.map",
+    "runtime-main.js": "/WeLightBlockchainOS/static/js/runtime-main.7ad84add.js",
+    "runtime-main.js.map": "/WeLightBlockchainOS/static/js/runtime-main.7ad84add.js.map",
+    "static/js/2.1b715d7d.chunk.js": "/WeLightBlockchainOS/static/js/2.1b715d7d.chunk.js",
+    "static/js/2.1b715d7d.chunk.js.map": "/WeLightBlockchainOS/static/js/2.1b715d7d.chunk.js.map",
+    "static/js/3.226237c1.chunk.js": "/WeLightBlockchainOS/static/js/3.226237c1.chunk.js",
+    "static/js/3.226237c1.chunk.js.map": "/WeLightBlockchainOS/static/js/3.226237c1.chunk.js.map",
+    "index.html": "/WeLightBlockchainOS/index.html",
+    "static/css/main.77c58565.chunk.css.map": "/WeLightBlockchainOS/static/css/main.77c58565.chunk.css.map",
+    "static/js/2.1b715d7d.chunk.js.LICENSE.txt": "/WeLightBlockchainOS/static/js/2.1b715d7d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ad84add.js",
+    "static/js/2.1b715d7d.chunk.js",
+    "static/css/main.77c58565.chunk.css",
+    "static/js/main.2433e667.chunk.js"
+  ]
+}
