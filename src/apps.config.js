@@ -21,15 +21,6 @@ const apps = [
         screen: displayChrome,
     },
     {
-        id: "vscode",
-        title: "Visual Studio Code",
-        icon: './themes/Yaru/apps/vscode.png',
-        disabled: false,
-        favourite: true,
-        desktop_shortcut: false,
-        screen: displayVsCode,
-    },
-    {
         id: "terminal",
         title: "Terminal",
         icon: './themes/Yaru/apps/bash.png',
@@ -37,6 +28,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayTerminal,
+    },
+    {
+        id: "vscode",
+        title: "Visual Studio Code",
+        icon: './themes/Yaru/apps/vscode.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayVsCode,
     },
     {
         id: "remix",
@@ -57,15 +57,6 @@ const apps = [
         screen: displayWeFront,
     },
     {
-        id: "netease",
-        title: "Netease",
-        icon: './themes/Yaru/apps/netease.png',
-        disabled: false,
-        favourite: true,
-        desktop_shortcut: false,
-        screen: displayNetease, // 嘉然小姐😅
-    },
-    {
         id: "ethbuild",
         title: "EthBuild",
         icon: './themes/Yaru/apps/ethBuild.png',
@@ -73,6 +64,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayEthBuild, // 嘉然小姐😅
+    },
+    {
+        id: "netease",
+        title: "Netease",
+        icon: './themes/Yaru/apps/netease.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayNetease, // 嘉然小姐😅
     },
     {
         id: "tiktok",
