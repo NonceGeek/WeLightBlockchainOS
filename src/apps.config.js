@@ -3,6 +3,7 @@ import displayTiktok from './components/apps/tiktok';
 import displayRemix from './components/apps/remix';
 import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
+import displayEthBuild from './components/apps/ethBuild';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
@@ -65,6 +66,15 @@ const apps = [
         screen: displayNetease, // 嘉然小姐😅
     },
     {
+        id: "ethbuild",
+        title: "EthBuild",
+        icon: './themes/Yaru/apps/ethBuild.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayEthBuild, // 嘉然小姐😅
+    },
+    {
         id: "tiktok",
         title: "Tiktok",
         icon: './themes/Yaru/apps/tiktok.png',
@@ -123,7 +133,9 @@ const urls = {
         // tiktok url
         tiktok: 'https://www.douyin.com/recommend',
         // remix url
-        remix: 'https://remix.ethereum.org/'
+        remix: 'https://remix.ethereum.org/',
+        // eth.build url
+        ethBuild: 'https://sandbox.eth.build/',
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
