@@ -10,6 +10,7 @@ import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
 import { displayTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
+import { displayConsole } from './components/apps/fiscoBcosConsole';
 
 const apps = [
     {
@@ -29,6 +30,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayTerminal,
+    },
+    {
+        id: "fiscoBcosConsole",
+        title: "FiscoBcosConsole",
+        icon: './themes/Yaru/apps/console.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayConsole,
     },
     {
         id: "vscode",
@@ -139,7 +149,9 @@ const urls = {
         // powered by stackblitz (edit, preview, console)
         vscode: 'https://stackblitz.com/edit/react-wlitvd',
         // terminal url
-        terminal: 'http://182.92.219.88:100/',
+        terminal: 'http://47.103.85.132:501/',
+        // fisco bcos console url
+        fiscoBcosConsoleUrl: 'http://47.103.85.132:100/',
         // tiktok url
         tiktok: 'https://www.douyin.com/recommend',
         // remix url
