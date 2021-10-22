@@ -5,7 +5,7 @@ import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import displayEthBuild from './components/apps/ethBuild';
 import displayWeLight from './components/apps/welight';
-import { displaySupplyChain } from './components/apps/supplyChain';
+import displaySupplyChain from './components/apps/supplyChain';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
@@ -172,7 +172,7 @@ const urls = {
         // welight url
         welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
         // supplyChain url
-        supplyChain: 'https://supplychain.cyberemd.com/'
+        supplyChain: 'http://supplychain.cyberemd.com/'
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
