@@ -4,13 +4,15 @@ import displayRemix from './components/apps/remix';
 import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import displayEthBuild from './components/apps/ethBuild';
-import displayWeLight from './components/apps/welight'
+import displayWeLight from './components/apps/welight';
+import { displaySupplyChain } from './components/apps/supplyChain';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
 import { displayTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
 import { displayConsole } from './components/apps/fiscoBcosConsole';
+
 
 const apps = [
     {
@@ -86,6 +88,15 @@ const apps = [
         screen: displayWeLight,
     },
     {
+        id: "supplyChain",
+        title: "supplyChain",
+        icon: './themes/Yaru/apps/supplyChain.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displaySupplyChain,
+    },
+    {
         id: "netease",
         title: "Netease",
         icon: './themes/Yaru/apps/netease.png',
@@ -159,7 +170,9 @@ const urls = {
         // eth.build url
         ethBuild: 'https://sandbox.eth.build/',
         // welight url
-        welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink'
+        welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
+        // supplyChain url
+        supplyChain: 'https://supplychain.cyberemd.com/'
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
