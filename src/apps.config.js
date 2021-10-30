@@ -4,6 +4,7 @@ import displayRemix from './components/apps/remix';
 import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import displayEthBuild from './components/apps/ethBuild';
+import displayExam from './components/apps/exam';
 import displayWeLight from './components/apps/welight';
 import displaySupplyChain from './components/apps/supplyChain';
 import { displayTerminal } from './components/apps/terminal';
@@ -77,6 +78,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayEthBuild,
+    },
+    {
+        id: "exam",
+        title: "Exam",
+        icon: './themes/Yaru/apps/exam.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayExam,
     },
     {
         id: "welight",
@@ -169,6 +179,8 @@ const urls = {
         remix: 'https://remix.ethereum.org/',
         // eth.build url
         ethBuild: 'https://sandbox.eth.build/',
+        // exam url
+        exam: 'http://47.103.78.210/#/public/exam/list',
         // welight url
         welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
         // supplyChain url
@@ -180,4 +192,4 @@ const urls = {
 }
 
 export default apps;
-export {urls};
+export { urls };
