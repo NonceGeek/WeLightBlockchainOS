@@ -5,6 +5,7 @@ import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import displayEthBuild from './components/apps/ethBuild';
 import displayExam from './components/apps/exam';
+import displaySolidityShell from './components/apps/solidityShell';
 import displayWeLight from './components/apps/welight';
 import displaySupplyChain from './components/apps/supplyChain';
 import { displayTerminal } from './components/apps/terminal';
@@ -42,6 +43,15 @@ const apps = [
         favourite: true,
         desktop_shortcut: false,
         screen: displayConsole,
+    },
+    {
+        id: "solidityShell",
+        title: "SolidityShell",
+        icon: './themes/Yaru/apps/solidity_shell.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displaySolidityShell,
     },
     {
         id: "vscode",
@@ -173,6 +183,8 @@ const urls = {
         terminal: 'http://47.103.85.132:501/',
         // fisco bcos console url
         fiscoBcosConsoleUrl: 'http://47.103.85.132:100/',
+        // solidity shell url
+        solidityShellUrl: 'http://124.251.110.210:4003/',
         // tiktok url
         tiktok: 'https://www.douyin.com/recommend',
         // remix url
