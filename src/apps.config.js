@@ -5,6 +5,7 @@ import displayVsCode from './components/apps/vscode';
 import displayWeFront from './components/apps/webaseFront';
 import displayEthBuild from './components/apps/ethBuild';
 import displayExam from './components/apps/exam';
+import displayMapGenerator from './components/apps/mapGenerator';
 import displaySolidityShell from './components/apps/solidityShell';
 import displayWeLight from './components/apps/welight';
 import displaySupplyChain from './components/apps/supplyChain';
@@ -99,6 +100,15 @@ const apps = [
         screen: displayExam,
     },
     {
+        id: "mapGenerator",
+        title: "MapGenerator",
+        icon: './themes/Yaru/apps/mapGenerator.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: false,
+        screen: displayMapGenerator,
+    },
+    {
         id: "welight",
         title: "WeLight",
         icon: './themes/Yaru/apps/welight.png',
@@ -132,7 +142,7 @@ const apps = [
         disabled: false,
         favourite: true,
         desktop_shortcut: false,
-        screen: displayTiktok, // 嘉然小姐😅
+        screen: displayTiktok,
     },
     {
         id: "settings",
@@ -196,7 +206,9 @@ const urls = {
         // welight url
         welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
         // supplyChain url
-        supplyChain: 'http://supplychain.cyberemd.com/'
+        supplyChain: 'http://supplychain.cyberemd.com/',
+        // taishang-world-generator url
+        mapGenerator: 'https://welightproject.github.io/tai_shang_world_generator/'
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
