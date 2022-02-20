@@ -1,36 +1,40 @@
-# WeLightBlockchainOS 微芒虚拟区块链操作系统
+# WeLightBlockchainOS: cloud-based blockchain operating system
 
-> Demo: http://os.doge.university
+> [中文版文档](./README-zh.md)
 
-## 功能与架构
+Demo: http://os.doge.university
 
-目前区块链开发工具多且复杂、环境配置存在一定难度，对个人而言需要上手门槛低、开箱即用的「区块链开发学习工作台」；对团队而言需要团队共用、远程共享的「最佳区块链开发环境」；对区块链生态组织而言，需要一个「全家桶」式的集成开发环境以吸引更多开发者。
+## Features and Architecture
+
+Currently, blockchain development tools are many and complicated. Environment configuration is hard for beginners. For developers, we need a easy to use and out-of-the-box 「Blockchain Development Learning Toolkits」; for teams, we need a remote and shareable 「Blockchain Development Environment」; for blockchain ecosystem, we need a 「whole bucket」 of integrated development environment to attract more developers.
 
 ![features](./docs/img/features.png)
 
-在这种需求下，本团队研发了本系统。本系统可从浏览器进行云端访问，同时为前端模拟系统，因此资源占用低。该系统由链管理、智能合约、区块链应用、学习工具集、知识库、IDE、基础设施、接口管理、权限控制、应用组件管理等多个功能模块组成，希望最终达到帮助开发者与开发团队高效学习掌握区块链知识、搭建区块链知识库、进行智能合约与区块链应用的开发维护、管理已有链等目的。
+With this need, our team has developed this system. This system can be accessed from the browser in the cloud and is also a front-end simulation system, so it has low resource consumption. The system consists of several functional modules such as chain management, smart contract, blockchain application, learning toolset, knowledge base, IDE, infrastructure, interface management, permission control, application component management, etc.
+
+We hope to finally achieve the purpose of helping developers and development teams to efficiently learn and master blockchain knowledge, build blockchain knowledge base, develop and maintain smart contracts and blockchain applications, and manage existing chain environments.
 
 ![architect](./docs/img/architect.png)
 
-## 启动项目
+## Start project
 
-下载依赖
+Install dependencies
 
 ```
 npm i
 ```
 
-运行项目
+Start project
 
 ```
 npm start
 ```
 
-## 开发简介
+## Development introduction
 
-### 修改App
+### modify App
 
-App的主体是`iframe`. 通过修改`iframe`的url可以让App显示不同的内容. 存储url的文件位于`src/apps.config.js`. 如要修改网易云音乐App显示的内容, 则可以进行如下修改:
+App's main body is `iframe`. We can have our App show different contents by modifying the `iframe`'s url. The url is stored at `src/apps.config.js`. If you want to change the content of the current music app, you can just do these modifications:
 
 ```
 // src/apps.config.js
@@ -38,14 +42,14 @@ App的主体是`iframe`. 通过修改`iframe`的url可以让App显示不同的�
 const urls = {
     appUrl: {
         - musicPlayer: '//music.163.com/outchain/player?type=4&id=959370203&auto=1&height=430',
-        + musicPlayer: '新url'
+        + musicPlayer: 'New url'
     ...
 ```
 
 
-### 添加App
+### "install" App
 
-在`apps`中添加一个App组件, 并在`apps.config.js`中添加App配置与App所用的url. 注意对象中要包含一个`displaySomeApp`函数.
+To "install" a new App, you need to add an App component to folder `apps`, and add App configuration and url in `apps.config.js`. Note that the component needs a `displaySomeApp` function.
 
 ```
 // src/components/apps/someapp.js
