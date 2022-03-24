@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import BackgroundImage from '../util components/background-image';
-import SideBar from './side_bar';
-import apps from '../../apps.config';
+// import SideBar from './side_bar';
+import apps, { appCategory } from '../../apps.config';
 import Window from '../base/window';
 import UbuntuApp from '../base/ubuntu_app';
-import AllApplications from '../screen/all-applications'
+// import AllApplications from '../screen/all-applications';
+import Fences from '../screen/fences';
 import DesktopMenu from '../context menus/desktop-menu';
 import DefaultMenu from '../context menus/default';
 import $ from 'jquery';
@@ -506,7 +507,7 @@ export class Desktop extends Component {
                 <BackgroundImage img={this.props.bg_image_name} />
 
                 {/* Ubuntu Side Menu Bar */}
-                <SideBar apps={apps}
+                {/* <SideBar apps={apps}
                     hide={this.state.hideSideBar}
                     hideSideBar={this.hideSideBar}
                     favourite_apps={this.state.favourite_apps}
@@ -515,7 +516,7 @@ export class Desktop extends Component {
                     closed_windows={this.state.closed_windows}
                     focused_windows={this.state.focused_windows}
                     isMinimized={this.state.minimized_windows}
-                    openAppByAppId={this.openApp} />
+                    openAppByAppId={this.openApp} /> */}
 
                 {/* Desktop Apps */}
                 {this.renderDesktopApps()}
@@ -532,10 +533,16 @@ export class Desktop extends Component {
                     )
                 }
 
-                { this.state.allAppsView ?
+                {/* { this.state.allAppsView ?
                     <AllApplications apps={apps}
                         recentApps={this.app_stack}
-                        openApp={this.openApp} /> : null}
+                        openApp={this.openApp} /> : null} */}
+
+                <Fences
+                    apps={apps}
+                    appCategory={appCategory}
+                    openApp={this.openApp}
+                />
 
             </div>
         )
