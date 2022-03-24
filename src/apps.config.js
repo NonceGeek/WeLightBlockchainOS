@@ -16,6 +16,15 @@ import { displayTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
 import { displayConsole } from './components/apps/fiscoBcosConsole';
 
+const appCategory = {
+    browser: 'Browser',
+    console: 'Console',
+    ide: 'IDE',
+    app: 'APP',
+    doc: 'Document',
+    entertainment: 'Entertainment',
+    misc: 'Misc',
+}
 
 const apps = [
     {
@@ -24,6 +33,7 @@ const apps = [
         icon: './themes/Yaru/apps/chrome.png',
         disabled: false,
         favourite: true,
+        category: appCategory.browser,
         desktop_shortcut: true,
         screen: displayChrome,
     },
@@ -33,6 +43,7 @@ const apps = [
         icon: './themes/Yaru/apps/bash.png',
         disabled: false,
         favourite: true,
+        category: appCategory.console,
         desktop_shortcut: false,
         screen: displayTerminal,
     },
@@ -42,6 +53,7 @@ const apps = [
         icon: './themes/Yaru/apps/console.png',
         disabled: false,
         favourite: true,
+        category: appCategory.console,
         desktop_shortcut: false,
         screen: displayConsole,
     },
@@ -51,6 +63,7 @@ const apps = [
         icon: './themes/Yaru/apps/solidity_shell.png',
         disabled: false,
         favourite: true,
+        category: appCategory.console,
         desktop_shortcut: false,
         screen: displaySolidityShell,
     },
@@ -60,6 +73,7 @@ const apps = [
         icon: './themes/Yaru/apps/vscode.png',
         disabled: false,
         favourite: true,
+        category: appCategory.ide,
         desktop_shortcut: false,
         screen: displayVsCode,
     },
@@ -69,6 +83,7 @@ const apps = [
         icon: './themes/Yaru/apps/remix.png',
         disabled: false,
         favourite: true,
+        category: appCategory.ide,
         desktop_shortcut: false,
         screen: displayRemix,
     },
@@ -78,6 +93,7 @@ const apps = [
         icon: './themes/Yaru/apps/webasefront.png',
         disabled: false,
         favourite: true,
+        category: appCategory.ide,
         desktop_shortcut: false,
         screen: displayWeFront,
     },
@@ -87,6 +103,7 @@ const apps = [
         icon: './themes/Yaru/apps/ethBuild.png',
         disabled: false,
         favourite: true,
+        category: appCategory.app,
         desktop_shortcut: false,
         screen: displayEthBuild,
     },
@@ -96,6 +113,7 @@ const apps = [
         icon: './themes/Yaru/apps/exam.png',
         disabled: false,
         favourite: true,
+        category: appCategory.app,
         desktop_shortcut: false,
         screen: displayExam,
     },
@@ -105,6 +123,7 @@ const apps = [
         icon: './themes/Yaru/apps/mapGenerator.png',
         disabled: false,
         favourite: true,
+        category: appCategory.app,
         desktop_shortcut: false,
         screen: displayMapGenerator,
     },
@@ -114,6 +133,7 @@ const apps = [
         icon: './themes/Yaru/apps/welight.png',
         disabled: false,
         favourite: true,
+        category: appCategory.doc,
         desktop_shortcut: false,
         screen: displayWeLight,
     },
@@ -123,6 +143,7 @@ const apps = [
         icon: './themes/Yaru/apps/supplyChain.png',
         disabled: false,
         favourite: true,
+        category: appCategory.app,
         desktop_shortcut: false,
         screen: displaySupplyChain,
     },
@@ -132,6 +153,7 @@ const apps = [
         icon: './themes/Yaru/apps/netease.png',
         disabled: false,
         favourite: true,
+        category: appCategory.entertainment,
         desktop_shortcut: false,
         screen: displayNetease, // 嘉然小姐😅
     },
@@ -141,6 +163,7 @@ const apps = [
         icon: './themes/Yaru/apps/tiktok.png',
         disabled: false,
         favourite: true,
+        category: appCategory.entertainment,
         desktop_shortcut: false,
         screen: displayTiktok,
     },
@@ -150,6 +173,7 @@ const apps = [
         icon: './themes/Yaru/apps/gnome-control-center.png',
         disabled: false,
         favourite: true,
+        category: appCategory.misc,
         desktop_shortcut: false,
         screen: displaySettings,
     },
@@ -159,6 +183,7 @@ const apps = [
         icon: './themes/Yaru/system/user-trash-full.png',
         disabled: false,
         favourite: false,
+        category: appCategory.misc,
         desktop_shortcut: true,
         screen: displayTrash,
     },
@@ -168,6 +193,7 @@ const apps = [
         icon: './themes/Yaru/apps/gedit.png',
         disabled: false,
         favourite: false,
+        category: appCategory.app,
         desktop_shortcut: true,
         screen: displayGedit,
     },
@@ -216,4 +242,7 @@ const urls = {
 }
 
 export default apps;
-export { urls };
+export {
+    urls,
+    appCategory,
+};
