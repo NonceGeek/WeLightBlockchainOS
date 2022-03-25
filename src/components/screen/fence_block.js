@@ -40,7 +40,7 @@ export class FenceBlock extends React.Component {
 
     render() {
         return (
-            <div className={"fence-block mt-10 ml-10 p-2 inline-flex flex-col rounded-md border-black border-opacity-60 bg-black bg-opacity-40 pointer-events-auto"}>
+            <div className={"fence-block mt-10 mx-5 p-2 inline-flex flex-col rounded-md border-black border-opacity-60 bg-black bg-opacity-40 pointer-events-auto"}>
                 <div className={"block-title text-center text-white mb-3"}>{this.state.category}</div>
                 <div className={"block-apps flex flex-row"}>
                     {this.renderBlock()}
