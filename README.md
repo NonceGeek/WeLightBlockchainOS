@@ -51,7 +51,7 @@ const urls = {
 
 To "install" a new App, you need to add an App component to folder `apps`, and add App configuration and url in `apps.config.js`. Note that the component needs a `displaySomeApp` function.
 
-```
+```js
 // src/components/apps/someapp.js
 
 import {urls} from '../../apps.config'
@@ -69,7 +69,7 @@ export const displaySomeApp = () => {
 }
 ```
 
-```
+```js
 // src/apps.config.js
 
 import { displaySomeApp } from './components/apps/someapp';
