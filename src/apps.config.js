@@ -6,13 +6,10 @@ import displayWeFront from './components/apps/webaseFront';
 import displayEthBuild from './components/apps/ethBuild';
 import displayExam from './components/apps/exam';
 import displayMapGenerator from './components/apps/mapGenerator';
-import displaySolidityShell from './components/apps/solidityShell';
 import displayWeLight from './components/apps/welight';
-import displaySupplyChain from './components/apps/supplyChain';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
-import { displayTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
 import { displayConsole } from './components/apps/fiscoBcosConsole';
 
@@ -56,16 +53,6 @@ const apps = [
         category: appCategory.console,
         desktop_shortcut: false,
         screen: displayConsole,
-    },
-    {
-        id: "solidityShell",
-        title: "SolidityShell",
-        icon: './themes/Yaru/apps/solidity_shell.png',
-        disabled: false,
-        favourite: true,
-        category: appCategory.console,
-        desktop_shortcut: false,
-        screen: displaySolidityShell,
     },
     {
         id: "vscode",
@@ -138,16 +125,6 @@ const apps = [
         screen: displayWeLight,
     },
     {
-        id: "supplyChain",
-        title: "supplyChain",
-        icon: './themes/Yaru/apps/supplyChain.png',
-        disabled: false,
-        favourite: true,
-        category: appCategory.app,
-        desktop_shortcut: false,
-        screen: displaySupplyChain,
-    },
-    {
         id: "netease",
         title: "Netease",
         icon: './themes/Yaru/apps/netease.png',
@@ -176,16 +153,6 @@ const apps = [
         category: appCategory.misc,
         desktop_shortcut: false,
         screen: displaySettings,
-    },
-    {
-        id: "trash",
-        title: "Trash",
-        icon: './themes/Yaru/system/user-trash-full.png',
-        disabled: false,
-        favourite: false,
-        category: appCategory.misc,
-        desktop_shortcut: true,
-        screen: displayTrash,
     },
     {
         id: "gedit",
@@ -219,8 +186,6 @@ const urls = {
         terminal: 'http://47.103.85.132:501/',
         // fisco bcos console url
         fiscoBcosConsoleUrl: 'http://47.103.85.132:100/',
-        // solidity shell url
-        solidityShellUrl: 'http://124.251.110.210:4003/',
         // tiktok url
         tiktok: 'https://www.douyin.com/recommend',
         // remix url
@@ -231,8 +196,6 @@ const urls = {
         exam: 'http://lab.cyberemd.com/#/public/exam/list',
         // welight url
         welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
-        // supplyChain url
-        supplyChain: 'http://supplychain.cyberemd.com/',
         // taishang-world-generator url
         mapGenerator: 'https://welightproject.github.io/tai_shang_world_generator/'
     },
