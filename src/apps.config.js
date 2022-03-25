@@ -7,6 +7,7 @@ import displayEthBuild from './components/apps/ethBuild';
 import displayExam from './components/apps/exam';
 import displayMapGenerator from './components/apps/mapGenerator';
 import displayWeLight from './components/apps/welight';
+import displayMore from './components/apps/more';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
@@ -19,6 +20,7 @@ const appCategory = {
     ide: 'IDE',
     app: 'APP',
     doc: 'Document',
+    more: 'More',
     entertainment: 'Entertainment',
     misc: 'Misc',
 }
@@ -115,6 +117,16 @@ const apps = [
         screen: displayMapGenerator,
     },
     {
+        id: "more",
+        title: "more",
+        icon: './themes/Yaru/apps/more.png',
+        disabled: false,
+        favourite: true,
+        category: appCategory.more,
+        desktop_shortcut: false,
+        screen: displayMore,
+    },
+    {
         id: "welight",
         title: "WeLight",
         icon: './themes/Yaru/apps/welight.png',
@@ -197,7 +209,9 @@ const urls = {
         // welight url
         welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
         // taishang-world-generator url
-        mapGenerator: 'https://welightproject.github.io/tai_shang_world_generator/'
+        mapGenerator: 'https://welightproject.github.io/tai_shang_world_generator/',
+        // more url
+        more: 'https://r8jmm3f9xe.feishu.cn/docs/doccn7NAgCeMZlz9AWzNc17Wxwh',
     },
     staticUrl: {
         repo: 'https://github.com/WeLightProject/WeLightBlockchainOS',
