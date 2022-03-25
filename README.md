@@ -36,7 +36,7 @@ npm start
 
 App's main body is `iframe`. We can have our App show different contents by modifying the `iframe`'s url. The url is stored at `src/apps.config.js`. If you want to change the content of the current music app, you can just do these modifications:
 
-```
+```js
 // src/apps.config.js
 
 const urls = {
