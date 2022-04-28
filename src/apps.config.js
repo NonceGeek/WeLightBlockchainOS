@@ -205,7 +205,7 @@ const urls = {
         // eth.build url
         ethBuild: 'https://sandbox.eth.build/',
         // exam url
-        exam: 'http://lab.cyberemd.com/#/public/exam/list',
+        exam: 'http://lab.cyberemd.com/public/exam/list',
         // welight url
         welight: 'https://r8jmm3f9xe.feishu.cn/docs/doccnofLLkqPWZssHdo3u2wbD7c?from=from_copylink',
         // taishang-world-generator url
