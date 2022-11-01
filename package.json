@@ -23,7 +23,7 @@
     "react-onclickoutside": "^6.10.0",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.0",
-    "web3": "^1.6.0",
+    "web3": "^1.8.0",
     "ws": "^7.4.6"
   },
   "homepage": ".",
